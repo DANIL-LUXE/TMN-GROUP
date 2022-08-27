@@ -1,0 +1,123 @@
+.main-section{
+  background-image:url('../img/main-section-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 80px;
+  @include mobile{
+    padding-bottom: 20px;
+  }
+  &__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include small-tablet{
+      padding-top: 100px;
+
+    }
+    @include mobile{
+      flex-direction: column;
+      align-items: flex-start
+    }
+  }
+  &__content{
+    max-width: 523px;
+    margin-right: 20px;
+  }
+  &__title{
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      background-image:url('../img/main-section-logo.svg');
+      width: 180px;
+      height: 158px;
+      top: -80px;
+      opacity: 0.8;
+    }
+    @include mobile{
+      font-size: 37px;
+    }
+  }
+  &__text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #FFFFFF;
+    &:nth-child(3){
+      margin-bottom: 50px;
+    }
+  }
+  &__link{
+    display: inline-block;
+    padding: 13px 27px;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color:var(--green);
+    transition: all .3s ease-in-out;
+    @include hover{
+      color:#FFFFFF;
+      background-color:var(--green)
+    }
+    @include small-tablet{
+      margin-bottom: 30px;
+
+    }
+  }
+  &__list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 3fr);
+    @include mobile{
+      grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 3fr);
+  }
+  }
+
+  &__item{
+
+    &--1{
+      grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    @include mobile{
+    grid-column-start: 3;
+    }
+    }
+    &--2{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 3;
+      @include mobile{
+        margin-right: 5px;
+      }
+
+    }
+    &--3{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    }
+  }
+  &__img{
+    max-width: 207px;
+    max-height: 207px;
+    @include tablet{
+      max-width: 150px;
+    }
+    @include small-tablet{
+      max-width: 125px;
+    }
+    @include mobile{
+      max-width: 110px;
+
+    }
+  }
+
+}

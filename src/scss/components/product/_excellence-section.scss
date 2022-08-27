@@ -1,0 +1,116 @@
+.excellence-section{
+  background-color: #F7F7F8;
+  padding-bottom: 100px;
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    @include norm-tablet{
+      align-items: center;
+    }
+    @include small-tablet{
+      flex-direction: column;
+    }
+  }
+}
+.excellence-section-left{
+  margin-right: 30px;
+  &__list{
+    max-width: 270px;
+    border-right: 2px solid rgba(#ACB7C5, 0.3);
+    display: flex;
+    flex-direction: column;
+    @include small-tablet{
+      border-right:none;
+      border-bottom: 2px solid rgba(#ACB7C5, 0.3);
+    }
+  }
+  &__item{
+    position: relative;
+    max-width: 214px;
+    margin-left: 55px;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 16px;
+
+    &:nth-child(1){
+      &::before{
+        content:'';
+        position: absolute;
+        background-image:url('../img/excellence-section/icon-1.svg');
+        width: 40px;
+        height: 40px;
+        left: -55px;
+        top: -10px;
+      }
+    }
+    &:nth-child(2){
+      &::before{
+        content:'';
+        position: absolute;
+        background-image:url('../img/excellence-section/icon-2.svg');
+        width: 40px;
+        height: 40px;
+        left: -55px;
+        top: -10px;
+      }
+    }
+    &:nth-child(3){
+      &::before{
+        content:'';
+        position: absolute;
+        background-image:url('../img/excellence-section/icon-3.svg');
+        width: 40px;
+        height: 40px;
+        left: -55px;
+        top: -5px;
+      }
+    }
+    &:nth-child(4){
+      &::before{
+        content:'';
+        position: absolute;
+        background-image:url('../img/excellence-section/icon-4.svg');
+        width: 40px;
+        height: 40px;
+        left: -55px;
+        top: -10px;
+      }
+    }
+  }
+}
+.excellence-section-right{
+  @include small-tablet{
+    margin-top: 30px;
+  }
+  &__list{
+    max-width: 844px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    @include norm-tablet{
+      grid-template-columns: repeat(2,1fr);
+    }
+    @include mobile{
+      grid-template-columns: repeat(1,1fr);
+    }
+    gap: 24px;
+  }
+  &__item{
+    max-width: 270px;
+  }
+  &__number{
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 14px;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    color:var(--green)
+  }
+  &__text{
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color:var(--black);
+  }
+}

@@ -1,0 +1,54 @@
+.breadcrumbs {
+  @include flex-v-center;
+  padding-top: 22px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 22px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: -14px;
+        top: 7px;
+        color: #ff0404;
+        background-image:url('../img/breadcrumbs-arrow.svg');
+        width: 4px;
+        height: 6px;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 13px;
+    line-height: 150%;
+    color: var(--color-gray);
+    transition: color 0.3s ease-in-out;
+
+    &:not([href]) {
+      color: #ACB7C5;
+      &:hover {
+      color: var(--black);
+    }
+    }
+
+    &:focus {
+      outline: 2px solid var(--black);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--green);
+    }
+
+    &:active {
+      color: var(--green);
+    }
+
+      
+  }
+
+}

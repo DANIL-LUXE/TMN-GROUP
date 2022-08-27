@@ -1,0 +1,112 @@
+.popular-section{
+ padding-bottom: 80px;
+ background: #F7F7F8;
+  &__flex{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    @include tablet{
+      margin-bottom: 25px;
+    }
+    @include small-tablet{
+      margin-bottom: 15px;
+    }
+    @include mobile{
+      flex-direction: column;
+    }
+  }
+  &__link{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color:var(--green);
+    transition: all .3s ease-in-out;
+    &:hover{
+      text-decoration: underline;
+    }
+    @include mobile{
+      margin-top: 7px;
+    }
+  }
+  &__content{
+    max-width: 228px;
+  }
+  &__list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    align-items: center;
+    @include desktop{
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+    }
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 19px rgba(0, 0, 0, 0.06);
+    border-radius: 2px;
+    max-width: 270px;
+    height: 422px;
+    padding-top: 7px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+    transition: box-shadow .3s ease-in-out;
+    &:hover{
+      box-shadow:none;
+    }
+
+  }
+  &__img{
+
+    margin-bottom: 8px;
+    margin-right: 13px;
+    height: 130px;
+
+  }
+  &__title{
+    margin: 0;
+    &-item{
+      margin: 0;
+      margin-bottom: 8px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      color:var(--black);
+    }
+  }
+  &__descr{
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 150%;
+    color:var(--gray)
+  }
+  &__price{
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 25px;
+    margin-right: 5px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color:var(--black);
+  }
+  &__col{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #ACB7C5;
+  }
+}

@@ -1,0 +1,38 @@
+.text-section-product{
+  background-color: #F7F7F8;
+  padding-bottom: 80px;
+  &__title{
+    margin-bottom: 20px;
+  }
+  &__content{
+    background: linear-gradient(180deg, #40474F 60.96%, rgba(64, 71, 79, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text ;
+  border-inline-color: transparent;
+  margin-bottom: 20px;
+  }
+  &__text{
+  margin: 0;
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  }
+  &__btn{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 110%;
+  color: var(--green);
+  border-bottom: 1px solid var(--green);
+  transition: all .3s ease-in-out;
+  &:hover{
+  color: var(--black);
+  border-bottom: 1px solid var(--black);
+  }
+  }
+
+}
+.text-hidden{
+display: none;
+}

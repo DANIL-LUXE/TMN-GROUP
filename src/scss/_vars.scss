@@ -1,0 +1,17 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "SFUIDisplay", sans-serif;
+  --content-width: 1170px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light: #F7F7F8;
+  --gray: #40474F;
+  --black: #082242;
+  --blue:#1764c2;
+  --green:#29b384;
+  --linear: linear-gradient(232.83deg, #165EBF -13.52%, #29B384 76.05%);
+}

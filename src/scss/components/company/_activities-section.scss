@@ -1,0 +1,55 @@
+.activities-section{
+  background: #F7F7F8;
+  padding-top: 80px;
+  padding-bottom: 70px;
+
+  background: linear-gradient(232.83deg, #165EBF -13.52%, #29B384 76.05%);
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    @include tablet{
+      align-items: center;
+    }
+
+    @include small-tablet{
+      flex-direction: column;
+    }
+  }
+  &__left{
+    margin-right: 30px;
+    @include small-tablet{
+      margin-bottom: 35px;
+    }
+  }
+  &__img{
+    @include tablet{
+      max-width: 380px;
+    }
+    @include small-tablet{
+      max-width: 410px;
+    }
+    @include mobile{
+      max-width: 300px;
+    }
+  }
+  &__title{
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  &__text{
+    margin: 0;
+    max-width: 570px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #FFFFFF;
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
+  }
+}

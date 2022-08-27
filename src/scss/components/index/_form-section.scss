@@ -1,0 +1,71 @@
+.form-section{
+  background-image: url('../img/form-section-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__content{
+    padding-top: 80px;
+      max-width: 730px;
+  }
+  &__title{
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    @include mobile{
+      margin-bottom: 10px;
+      font-size: 26px;
+    }
+  }
+  &__descr{
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #FFFFFF;
+    @include mobile{
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+  }
+  &__post{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 80px;
+    @include tablet{
+      flex-direction: column;
+    }
+
+  }
+  &__input{
+    width: 270px;
+    height: 48px;
+    padding: 0 15px;
+    background: #F7F7F8;
+    border-radius: 2px;
+    border:none;
+    outline: 1px solid var(--green);
+    display: inline-block;
+    margin-right: 15px;
+    @include tablet{
+      width: 100%;
+      display: block;
+      margin-bottom: 15px;
+    }
+    &::placeholder{
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #ACB7C5;
+    }
+  }
+  &__btn{
+    padding: 13px 86px;
+  }
+
+
+}

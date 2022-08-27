@@ -1,0 +1,450 @@
+.header{
+  position: relative;
+  z-index: 500;
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: all .3s ease-in-out;
+  @include big-desktop{
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  &__container{
+    position: relative;
+    display: flex;
+    align-items: center;
+  justify-content: space-between;
+    @include big-desktop{
+      position: absolute;
+      flex-direction: column;
+      background-color:#FFFFFF;
+      width: 100%;
+      z-index: 10;
+      padding-bottom: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .3s ease-in-out;
+    }
+  }
+
+  .container--active{
+    opacity: 1;
+    visibility: visible;
+  }
+  &__wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    @include big-desktop{
+      flex-direction: column;
+    }
+  }
+&__logo{
+display: inline-block;
+  margin-right: 48px;
+  @include big-desktop{
+    margin-right: 0;
+  }
+  @include mobile{
+    margin-right: 31px;
+      margin-bottom: 25px;
+    }
+}
+&__tel{
+  position: relative;
+  &-btn{
+    position: relative;
+    &::after{
+      content:'';
+      position: absolute;
+      background-image:url('../img/tel-arrow.svg');
+      width: 13px;
+      height: 12px;
+      top: -10px;
+      z-index: 11;
+    }
+  }
+}
+&__tel-number{
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--black);
+    transition: color .3s ease-in-out;
+    @include hover{
+      color:var(--green);
+    }
+    &::before{
+      content:'';
+      position: absolute;
+      z-index: 10;
+      background-image:url('../img/tel.svg');
+      width: 18px;
+      height: 18px;
+      left: -25px;
+      top: 3px;
+    }
+  }
+  &__valuta{
+    margin-right: 80px;
+    @include big-desktop{
+      margin: 0;
+      margin-bottom: 30px;
+    }
+    @include mobile{
+        margin-top: 15px;
+      }
+  }
+
+  &__valuta-btn{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--black);
+    margin-right: 7px;
+    @include mobile{
+        margin-right: 12px;
+      }
+    &-ru{
+      opacity: 0.3;
+    }
+  }
+  &__social{
+    position: relative;
+    display: flex;
+    align-items: center;
+    &-inner{
+      position: relative;
+      z-index: 10;
+    }
+    &-label{
+      position: absolute;
+      z-index: 5;
+      right: 0px;
+      top: 18px;
+      opacity: 0;
+      overflow: hidden;
+       display: flex;
+       animation-name: searthMobileFade;
+       transition: all .3s ease-in-out;
+    }
+    &-btn{
+      position: absolute;
+      display: inline-block;
+      background-color:var(--green);
+      color: var(--black);
+      right: 0;
+      top: 0px;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-top: 10px;
+    padding-bottom: 11px;
+    transition: color .3s ease-in-out;
+    @include hover{
+      color:#ffffff;
+    }
+    }
+
+    &-input{
+
+      border:none;
+      outline: var(--green);
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      color:var(--black);
+      border: 1px solid #ACB7C5;
+      &::placeholder{
+        font-size: 16px;
+        font-weight: 400;
+        color:var(--black);
+      }
+      @include big-desktop{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+      }
+    }
+  }
+  &__btn-searth{
+    &::before{
+      content:'';
+      position: absolute;
+      z-index: 10;
+      background-image:url('../img/search.svg');
+      width: 24px;
+      height: 24px;
+      left: -35px;
+      top: -10px;
+      @include big-desktop{
+      top: 15px;
+    }
+    }
+  }
+  &__btn-cart{
+      &::before{
+      content:'';
+      position: absolute;
+      background-image:url('../img/cart.svg');
+      top: -10px;
+      width: 24px;
+      height: 20px;
+
+
+      @include big-desktop{
+      top: 18px;
+
+    }
+    }
+    &-span{
+        background-color:var(--green);
+        position: absolute;
+        border-radius:100%;
+        background-color:var(--green);
+        height: 14px;
+        width: 14px;
+        top: -16px;
+        right: -29px;
+        z-index: 30;
+        color: #F7F7F8;
+        font-size: 11px;
+        line-height: 120%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include big-desktop{
+        top: -17px;
+        left: 37px;
+      }
+    }
+
+  }
+}
+.header__btn-cart--desc{
+@include big-desktop{
+          display: none;
+      }
+}
+.header__btn-searth--desc{
+@include big-desktop{
+          display: none;
+      }
+}
+.header__btn-searth-mobile{
+  &::before{
+    top: -12px;
+    left: -6px;
+    @include mobile{
+        left: -37px;
+      }
+  }
+@include for-desktop{
+          display: none;
+      }
+}
+.header__btn-cart-mobile{
+  &::before{
+    top: -12px;
+    left: 27px;
+    @include mobile{
+        left: 20px;
+      }
+  }
+  &::after{
+    top: -17px;
+    left: 41px;
+    @include mobile{
+        left: 37px;
+      }
+  }
+@include for-desktop{
+          display: none;
+      }
+}
+
+.header__social-label--desktop{
+@include desktop{
+    top: -140px;
+    right: -200px;
+
+}
+  @include mobile{
+    top: -102px;
+    right: -85px;
+  }
+}
+.header__social-label--mobile{
+@include big-desktop{
+display: none;
+  }
+  @include for-desktop{
+        top: -31px;
+   left: 255px;
+   }
+    top: -33px;
+    right: 14px;
+}
+
+
+.header__social-label--active{
+opacity: 1;
+visibility: visible;
+transition: all .3s ease-in-out;
+}
+
+.header-nav{
+  &__list{
+    display: flex;
+    align-items: center;
+    margin-right: 70px;
+    @include big-desktop{
+    margin: 0;
+    }
+    @include mobile{
+      flex-direction: column;
+    }
+  }
+  &__item{
+    margin-right: 26px;
+    @include mobile{
+      margin-bottom: 25px;
+      margin-right: 32px;
+    }
+
+  }
+  &__link{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color:var(--black);
+
+    @include hover{
+      border-bottom:1px solid var(--green);
+    }
+    @include mobile{
+      font-size: 18px;
+    }
+
+    &--green{
+      padding-top: 32px;
+      padding-bottom: 34px;
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color:var(--green);
+      color:#FFFFFF;
+      @include big-desktop{
+      padding: 0;
+      background-color:transparent;
+      color:var(--black);
+
+  }
+    }
+
+}
+  &__btn{
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 23px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--black);
+    transition: all .3s ease-in-out;
+    @include hover{
+      color:var(--green)
+    }
+    @include mobile{
+      font-size: 18px;
+      padding-top: 22px;
+      padding-bottom: 22px;
+    }
+  &::after{
+      content:'';
+      position: absolute;
+      background-image:url('../img/tel-arrow.svg');
+      width: 13px;
+      height: 12px;
+      bottom: 35px;
+      right: 7px;
+      @include mobile{
+        top: 31px;
+      }
+    }
+  }
+}
+.dropdown-tel{
+  position: absolute;
+  width: 210px;
+  opacity: 0;
+  visibility: hidden;
+  padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  top: 41px;
+  right: -56px;
+  border-radius: 4px;
+  background: #FFFFFF;
+box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+&__item{
+margin-bottom: 10px;
+}
+&__link{
+  position: relative;
+  color:var(--black);
+
+  &::before{
+      content:'';
+      position: absolute;
+      z-index: 10;
+      background-image:url('../img/tel.svg');
+      width: 18px;
+      height: 18px;
+      left: -25px;
+      top: 3px;
+    }
+    &--active{
+      background-image:none;
+      color:var(--green);
+      &::before{
+        content:'';
+        background-image:none;
+      }
+    }
+}
+}
+.dropdown-tel--active{
+  opacity: 1;
+  visibility: visible;
+}
+.container__burger{
+  display: flex;
+  justify-content: flex-end
+}
+.header--scrolled{
+    position: fixed;
+    animation-name: headerFade;
+    animation-duration: 1s;
+  }
+@keyframes headerFade {
+  0%{
+    opacity: 0;
+    top: -70px;
+  }
+  100%{
+    opacity: 1;
+    top: 0;
+  }
+}
+@keyframes searthMobileFade {
+  0%{
+    opacity: 0;
+    right: 0;
+  }
+  100%{
+    opacity: 1;
+    right: 100px;
+  }
+}

@@ -1,0 +1,62 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+//INDEX.HTML
+@import "./components/header-nav";
+@import "./components/index/burger";
+@import "./components/index/main-section";
+@import "./components/index/categories-section";
+@import "./components/index/popular-section";
+@import "./components/index/specialism-section";
+@import "./components/index/benefits-section";
+@import "./components/index/form-section";
+@import "./components/index/news-section";
+@import "./components/footer";
+
+//COMPANY.HTML
+@import "./components/company/company-section";
+@import "./components/company/breadcrumbs";
+@import "./components/company/activities-section";
+@import "./components/company/advantage-section";
+//CATALOG.HTML
+@import "./components/catalog/viewed-section";
+@import "./components/catalog/catalog-section";
+@import "./components/catalog/catalog-section-filters";
+@import "./components/catalog/text-section";
+@import "./components/catalog/header-card";
+
+// PRODUCT.HTML
+@import "./components/product/product-section";
+@import "./components/product/tabs-section";
+@import "./components/product/certificates-section";
+@import "./components/product/excellence-section";
+@import "./components/product/prevention-section";
+@import "./components/product/text-section-product";
+
+//BLOG.HTML
+@import "./components/blog/blog-section";
+
+//ARTICLE.HTML
+@import "./components/article/article-section";
+
+//CONTACTS.HTML
+@import "./components/contacts/contacts-section";
+
+//Delivery.HTML
+
+@import "./components/delivery/delivery-section";
+
+//searth-completed.HTML
+@import "./components/search-completed/search-completed-section";
+@import "./components/search-completed/paper-section";
+
+//search-nothing.HTML
+@import "./components/search-nothing/search-nothing-section";
+
+//basket-nothing.HTML.
+@import "./components/basket/basket-nothing-section";
+@import "./components/basket/basket-completed-section";
